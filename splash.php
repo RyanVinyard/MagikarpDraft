@@ -73,17 +73,7 @@ mysqli_close($connection);
             <td>Pokemon</td>
           </tr>
         </thead>
-        <tbody>
-<<<<<<< HEAD
-          <?php
-          foreach ($result as $result){
-            echo'<tr>';
-            echo'<td>'. $result['forme']."</td>";
-            echo'</tr>';
-          } ?>
-=======
-
->>>>>>> 7da9b05cb2be238935712dab87260f00ceeb27dc
+        <tbody>g
         </tbody>
         </table>
     </div> -->

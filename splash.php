@@ -1,3 +1,50 @@
+<?php
+
+//Get Values from login page
+//$user = $_POST['username'];
+
+//Connect to the database
+$connection = mysqli_connect("localhost", "root", "", "draftdb");
+
+//Check connection
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
+//Query
+$pokemonList = mysqli_query($connection, "SELECT forme FROM pokemon");
+
+//loop the data
+// if  ($result = mysqli_query($connection, $pokemonList)) {
+//
+//   //fetch associative array
+//   while ($row = mysql_fetch_assoc($result)) {
+//     printf ("%s\n", $row["forme"]);
+//   }
+//
+//   //free result set
+//   mysqli_free_result($result);
+// }
+
+
+
+
+if ($pokemonList->num_rows > 0) {
+  echo "<table><tr><th>Pokemon</th></tr>";
+  // output data of each row
+  while($row = $pokemonList->fetch_assoc()) {
+    echo "<tr><td>".$row["forme"]."</td></tr>";
+  }
+  echo "</table>";
+} else {
+  echo "0 results";
+}
+
+//close connection
+mysqli_close($connection);
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -19,7 +66,7 @@
     <div id="teamNames">
     </div>
 
-    <div id="pokemonTable">
+    <!-- <div id="pokemonTable">
       <table>
         <thead>
           <tr>
@@ -27,15 +74,19 @@
           </tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
           <?php
           foreach ($result as $result){
             echo'<tr>';
             echo'<td>'. $result['forme']."</td>";
             echo'</tr>';
           } ?>
+=======
+
+>>>>>>> 7da9b05cb2be238935712dab87260f00ceeb27dc
         </tbody>
         </table>
-    </div>
+    </div> -->
 
 
 

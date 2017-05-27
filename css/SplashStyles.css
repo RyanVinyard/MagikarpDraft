@@ -1,0 +1,12 @@
+body {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #7cab78;
+}
+
+#splashHeader img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}

@@ -31,7 +31,7 @@
           foreach ($result as $result){
             echo'<tr>';
             echo'<td>'. $result['forme']."</td>";
-            echo'<tr>';
+            echo'</tr>';
           } ?>
         </tbody>
         </table>

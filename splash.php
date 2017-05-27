@@ -32,7 +32,7 @@
 
       //Query
       mysqli_query($connection, "SET NAMES 'utf8'");
-      $pokemonList = mysqli_query($connection, "SELECT forme FROM pokemon");
+      $pokemonList = mysqli_query($connection, "SELECT forme, id FROM pokemon");
 
       echo '<table border="1" class="pTable">';
       $i=0;
@@ -43,9 +43,12 @@
           $pokemon = '';
         }
 
-        $pokemon .='<td class="td"><button onclick="pClick">'.$row['forme'].'</button></td>';
+        //$pokemon .='<td class="td"><img src="./img/pokeImages/737.png" alt = "" style="width:50px; height:50px; padding-top:5px;"><button onclick="pClick">'.$row['forme'].'</button></td>';
+        $pokemon .='<td class="td"><img src="./img/pokeImages/'.$row['id'].'.gif" alt = "" style="width:50px; height:50px; padding-top:5px;"><button onclick="pClick">'.$row['forme'].'</button></td>';
 
-        if($i%12==11){
+
+
+        if($i%12==9){
           echo '</tr>';
           echo '<tr class="tr">'. $pokemon . '</tr>';
         }

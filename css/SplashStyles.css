@@ -12,12 +12,17 @@ body {
 }
 
 .pTable {
-  display: inline-block;
+  display: inline-flex;
   overflow-y: scroll;
   max-height: 400px;
 }
 
 table {
+  margin-left:5%;
   text-align: center;
+}
+
+button {
+  display: block;
   margin:auto;
 }

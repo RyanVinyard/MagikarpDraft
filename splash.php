@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,6 +20,22 @@
     </div>
 
     <div id="pokemonTable">
+      <table>
+        <thead>
+          <tr>
+            <td>Pokemon</td>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+          foreach ($result as $result){
+            echo'<tr>';
+            echo'<td>'. $result['forme']."</td>";
+            echo'<tr>';
+          } ?>
+        </tbody>
+        </table>
+    </div>
 
 
 

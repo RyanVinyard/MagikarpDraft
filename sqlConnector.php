@@ -13,7 +13,7 @@ if (mysqli_connect_errno()) {
 }
 
 //Query
-$pokemonList = mysqli_query("SELECT forme FROM pokemon limit 1");
+$pokemonList = mysqli_query("SELECT forme FROM pokemon");
 
 //loop the data
 if ( ($result = mysqli_query($connection, $pokemonList)) {

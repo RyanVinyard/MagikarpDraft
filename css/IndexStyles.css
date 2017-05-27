@@ -1,0 +1,23 @@
+body {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #7cab78;
+}
+
+#banner img {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+.inputs {
+  text-align: center;
+}
+
+@media (max-width:499px) {
+  #banner img {
+    width: 400px;
+  }
+}

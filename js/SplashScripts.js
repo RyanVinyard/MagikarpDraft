@@ -1,4 +1,8 @@
 $( document ).ready(function() {
     console.log("Page has loaded successfully");
-    document.getElementById("teamNames").innerHTML = "Ayo whatup";
+    console.log(localStorage);
+    var teamNames = localStorage["array"].split(",");
+    console.log(teamNames);
+    document.getElementById("teamNames").innerHTML = teamNames[0];
+
 });

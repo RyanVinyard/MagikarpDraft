@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,7 +19,6 @@
     <h3>Team Names:</h3>
     <div id="teamNames">
     </div>
-
 
       <?php
       //Connect to the database

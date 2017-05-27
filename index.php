@@ -19,7 +19,8 @@
 
 					document.getElementById("formcontent").appendChild(product);
 				}
-
+				document.getElementById("number1").style = "display: none";
+				document.getElementById("submit").style = "display: none";
 				document.getElementById("endButt").style = "display: initial";
 
 
@@ -45,8 +46,8 @@
 		</div>
 		<br>
 		<div class="inputs">
-			<input id="number1" type="number">
-			<input type="submit" value="Submit" onclick="numPlayers()">
+			<input id="number1" type="number" min = "2" max = "10">
+			<input id ="submit" type="submit" value="Submit"  onclick="numPlayers()">
 			<br><br>
 		 	<div id="formcontent"></div>
 		 	<br><br>

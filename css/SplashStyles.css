@@ -10,3 +10,14 @@ body {
   margin: 0 auto;
   margin-bottom: 12px;
 }
+
+.pTable {
+  display: inline-block;
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+table {
+  text-align: center;
+  margin:auto;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Magikarp Draft</title>
+	
+	
+
+
+
+	<body>
+		<script>
+			var numTeams = 0;
+			var teamNames = [];
+			function numPlayers(){
+    			var number1 = parseInt(document.getElementById("number1").value);
+    			numTeams = number1;
+
+				for (i = 0; i<number1; i++){
+    				product = document.createElement("input");
+    				product.value = "Enter User " + (i+1);
+    				product.name = "name"+(i+1);
+    				product.id = "id"+(i+1);
+				
+					document.getElementById("formcontent").appendChild(product);
+				}
+				
+				document.getElementById("endButt").style = "display: initial";
+				
+				
+			}
+			
+			function endingFunc(){
+				for (i=0; i<numTeams; i++){
+					teamNames.push(document.getElementById("id"+(i+1)).value);
+				}
+				
+				localStorage["array"] = teamNames;
+				window.location.href = "splash.html";
+				
+			
+				 
+			
+			
+			}
+			
+		</script>
+		<h3> How many players?</h3>
+		<br>
+		<input id="number1" type="number">
+		<input type="submit" value="Submit" onclick="numPlayers()">
+		<br><br>
+	 	<div id="formcontent"></div>
+	 	<br><br>
+	 	<input id="endButt" type ="button" value = "Submit Team Names" style="display: none;" 
+	 		onclick ="endingFunc()">
+	 	
+	 	
+		
+		
+		
+
+
+	</body>
+</html>

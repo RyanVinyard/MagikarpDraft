@@ -9,11 +9,25 @@ body {
   width: 500px;
   display: block;
   margin: 0 auto;
-  margin-bottom: 12px;
+}
+
+#banner2 img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
 }
 
 .inputs {
   text-align: center;
+}
+
+input {
+  margin: 12px;
+}
+
+#hitmontop img {
+  display: block;
+  margin: auto;
 }
 
 @media (max-width:499px) {

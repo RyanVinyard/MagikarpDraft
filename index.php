@@ -47,6 +47,7 @@
   		document.getElementById("banner2").style.display = 'none';
 			};
 		</script>
+		
 		<div id="banner">
 			<img src="http://fontmeme.com/permalink/170527/d83da235a584b670ff5accbab4b97a00.png" alt="pokemon-font" border="0">
 		</div>

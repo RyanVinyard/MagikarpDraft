@@ -12,6 +12,7 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
+
 //Query
 $pokemonList = mysqli_query($connection, "SELECT forme FROM pokemon");
 
@@ -73,7 +74,7 @@ mysqli_close($connection);
             <td>Pokemon</td>
           </tr>
         </thead>
-        <tbody>g
+        <tbody>gg
         </tbody>
         </table>
     </div> -->

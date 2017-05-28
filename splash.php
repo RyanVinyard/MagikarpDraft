@@ -22,7 +22,7 @@
 
       <?php
       //Connect to the database
-      $connection = mysqli_connect("localhost", "root", "", "draftdb");
+      $connection = mysqli_connect("localhost:3306", "root", "", "draftdb");
 
       //Check connection
       if (mysqli_connect_errno()) {

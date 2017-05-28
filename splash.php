@@ -8,7 +8,7 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script src="js/SplashScripts.js"></script>
+    <script src="js/SplashScripts.js?v=2"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Welcome to the draft!</title>
   </head>
@@ -17,12 +17,15 @@
       <img src="http://fontmeme.com/permalink/170527/feaa6a98b401d0e8560a8e9df3cbe045.png" alt="pokemon-font" border="0">
     </div>
     <h3>Team Names:</h3>
-    <div id="teagmNames">
+    <div id="teamNames">
+
+
+
     </div>
 
       <?php
       //Connect to the database
-      $connection = mysqli_connect("localhost", "root", "", "draftdb");
+      $connection = mysqli_connect("localhost:3306", "root", "", "draftdb");
 
       //Check connection
       if (mysqli_connect_errno()) {
@@ -44,7 +47,7 @@
         }
 
         //$pokemon .='<td class="td"><img src="./img/pokeImages/737.png" alt = "" style="width:50px; height:50px; padding-top:5px;"><button onclick="pClick">'.$row['forme'].'</button></td>';
-        $pokemon .='<td class="td"><img src="./img/pokeImages/'.$row['id'].'.gif" alt = "" style="width:50px; height:50px; padding-top:5px;"><button onclick="pClick">'.$row['forme'].'</button></td>';
+        $pokemon .='<td class="td"><img src="./img/pokeImages/'.$row['id'].'.gif" alt = "" style="width:50px; height:50px; padding-top:5px;"><button onclick="pClick()" onclick=this.disabled=true>'.$row['forme'].'</button></td>';
 
 
 

@@ -17,12 +17,12 @@
       <img src="http://fontmeme.com/permalink/170527/feaa6a98b401d0e8560a8e9df3cbe045.png" alt="pokemon-font" border="0">
     </div>
     <h3>Team Names:</h3>
-    <div id="teamNames">
+    <div id="teagmNames">
     </div>
 
       <?php
       //Connect to the database
-      $connection = mysqli_connect("localhost:3306", "root", "", "draftdb");
+      $connection = mysqli_connect("localhost", "root", "", "draftdb");
 
       //Check connection
       if (mysqli_connect_errno()) {

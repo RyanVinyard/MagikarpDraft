@@ -23,6 +23,19 @@
 
     </div>
 
+
+
+    <script type="text/javascript">
+
+    function pClick(objButton) {
+      var forme = " <?php echo json_encode($row['forme']); ?> ";
+      alert(forme);
+      alert(objButton.value);
+      console.log(forme);
+
+    };
+    </script>
+
       <?php
       //Connect to the database
       $connection = mysqli_connect("localhost:3306", "root", "", "draftdb");
@@ -47,7 +60,7 @@
         }
 
         //$pokemon .='<td class="td"><img src="./img/pokeImages/737.png" alt = "" style="width:50px; height:50px; padding-top:5px;"><button onclick="pClick">'.$row['forme'].'</button></td>';
-        $pokemon .='<td class="td"><img src="./img/pokeImages/'.$row['id'].'.gif" alt = "" style="width:50px; height:50px; padding-top:5px;"><button onclick="pClick()" onclick=this.disabled=true>'.$row['forme'].'</button></td>';
+        $pokemon .='<td class="td"><img src="./img/pokeImages/'.$row['id'].'.gif" alt = "" style="width:50px; height:50px; padding-top:5px;"><button type="submit" name="fk" onclick="pClick(this)" value='.$row['forme'].'>'.$row['forme'].'</button></td>';
 
 
 
@@ -59,6 +72,8 @@
         $i++;
       }
       echo '</table>';
+
+
 
 
 
@@ -89,7 +104,12 @@
       //close connection
       mysqli_close($connection);
 
+
+
+
       ?>
+
+
 
 
   </body>

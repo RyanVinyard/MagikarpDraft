@@ -8,7 +8,7 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script src="js/SplashScripts.js?v=2"></script>
+    <script src="js/SplashScripts.js?v=1"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Welcome to the draft!</title>
   </head>
@@ -18,22 +18,31 @@
     </div>
     <h3>Team Names:</h3>
     <div id="teamNames">
+    </div>
 
-
-
+    <p>Currently picking for: </p>
+    <div id="whoseTurn">
     </div>
 
 
 
     <script type="text/javascript">
+    var teamNames = localStorage["array"].split(",");
+    var arrayLength = teamNames.length;
 
-    function pClick(objButton) {
-      var forme = " <?php echo json_encode($row['forme']); ?> ";
-      alert(forme);
-      alert(objButton.value);
-      console.log(forme);
+    function pickThisMon(objButton) {
+      console.log(arrayLength);
+      console.log(objButton.value);
+      var pickedMon = objButton.value;
+
+      for (var i = 0; i < arrayLength; i++) {
+        $("#whoseTurn").text(teamNames[i]);
+      }
+
+      // var currentTeam = teamNames[i];
 
     };
+
     </script>
 
       <?php
@@ -60,7 +69,7 @@
         }
 
         //$pokemon .='<td class="td"><img src="./img/pokeImages/737.png" alt = "" style="width:50px; height:50px; padding-top:5px;"><button onclick="pClick">'.$row['forme'].'</button></td>';
-        $pokemon .='<td class="td"><img src="./img/pokeImages/'.$row['id'].'.gif" alt = "" style="width:50px; height:50px; padding-top:5px;"><button type="submit" name="fk" onclick="pClick(this)" value='.$row['forme'].'>'.$row['forme'].'</button></td>';
+        $pokemon .='<td class="td"><img src="./img/pokeImages/'.$row['id'].'.gif" alt = "" style="width:50px; height:50px; padding-top:5px;"><button type="submit" name="fk" onclick="pickThisMon(this)" value='.$row['forme'].'>'.$row['forme'].'</button></td>';
 
 
 

@@ -9,7 +9,6 @@
 	crossorigin="anonymous"></script>
 	<script src="js/IndexScripts.js?v=1"></script>
 	<body>
-
 		<div id="banner">
 			<img src="http://fontmeme.com/permalink/170527/d83da235a584b670ff5accbab4b97a00.png" alt="pokemon-font" border="0">
 		</div>
@@ -30,6 +29,5 @@
 		<div id="hitmontop">
 			<img src="./img/hitmontop.gif">
 		</div>
-
 	</body>
 </html>

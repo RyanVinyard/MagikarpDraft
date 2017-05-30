@@ -6,9 +6,8 @@ function numPlayers(){
 
     document.getElementById("banner").style.display = 'none';
     document.getElementById("banner2").style.display = 'block';
-    console.log("you did it");
 
-  for (i = 0; i<number1; i++){
+  for (var i = 0; i<number1; i++){
       product = document.createElement("input");
       product.placeholder = "Enter Team Name " + (i+1);
       product.name = "name"+(i+1);

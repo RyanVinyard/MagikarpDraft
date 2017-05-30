@@ -24,20 +24,39 @@
     <div id="whoseTurn">
     </div>
 
-
-
     <script type="text/javascript">
     var teamNames = localStorage["array"].split(",");
     var arrayLength = teamNames.length;
+    var team = [];
+
+    for (var i = 0; i < arrayLength; i++) {
+      team[i] = teamNames[i];
+      // $("#whoseTurn").text(teamNames[i]);
+    }
+    var currentTeam = team[0];
+    var currentTeamIndex = teamNames.indexOf(currentTeam);
+    var nextTeam = team[currentTeamIndex + 1];
+    var nextTeamIndex = teamNames.indexOf(nextTeam);
 
     function pickThisMon(objButton) {
-      console.log(arrayLength);
-      console.log(objButton.value);
       var pickedMon = objButton.value;
+      console.log(pickedMon);
 
-      for (var i = 0; i < arrayLength; i++) {
-        $("#whoseTurn").text(teamNames[i]);
-      }
+
+      $("#whoseTurn").text(nextTeam);
+      console.log(currentTeam);
+      console.log(currentTeamIndex);
+      console.log(nextTeam);
+      console.log(nextTeamIndex);
+      currentTeam = nextTeam;
+      currentTeamIndex = nextTeamIndex;
+      nextTeamIndex++;
+      nextTeam = teamNames[nextTeamIndex];
+      console.log(currentTeam);
+      console.log(currentTeamIndex);
+      console.log(nextTeam);
+      console.log(nextTeamIndex);
+
 
       // var currentTeam = teamNames[i];
 

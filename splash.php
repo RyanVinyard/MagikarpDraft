@@ -8,7 +8,7 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script src="js/SplashScripts.js?v=11"></script>
+    <script src="js/SplashScripts.js?v=20"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Welcome to the draft!</title>
   </head>
@@ -60,8 +60,9 @@ file later -->
       $("#whoseTurn").text(nextTeam);
       $("#whichTeam").text(currentTeam + " has selected: " + pickedMon + "!");
 
-//This next bit just finds the div for whichever team just picked. The divs were
-//created in the js file. See the comment there.
+// This next bit just finds the div for whichever team just picked and adds the
+// Pokemon that was picked. The divs were created in the js file. See the comment
+// there.
       var teamJustPicked = $("body").find('#teamSlot' + currentTeamIndex);
       $(teamJustPicked).append(pickedMon + ", ");
 

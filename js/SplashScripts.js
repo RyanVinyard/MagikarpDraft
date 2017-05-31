@@ -1,6 +1,6 @@
 $( document ).ready(function() {
+    var audio = document.getElementById("audio").volume = 0.15;
     var teamNames = localStorage["array"].split(",");
-
     var arrayLength = teamNames.length;
     var team = [];
 

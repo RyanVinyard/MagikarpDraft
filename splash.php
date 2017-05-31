@@ -24,49 +24,49 @@
     <div id="whoseTurn">
     </div>
 
+<!-- Script tag added here for ease of php parsing, likely to move to a different
+file later -->
     <script type="text/javascript">
     var teamNames = localStorage["array"].split(",");
     var arrayLength = teamNames.length;
     var team = [];
 
+// This for loop creates n variables named teami, where n is the number of teams
+// and i is the team number.
     for (var i = 0; i < arrayLength; i++) {
       team[i] = teamNames[i];
-      // $("#whoseTurn").text(teamNames[i]);
     }
-    var currentTeam = team[0];
+    var currentTeam = teamNames[0];
     var currentTeamIndex = teamNames.indexOf(currentTeam);
-    var nextTeam = team[currentTeamIndex + 1];
+    var nextTeam = teamNames[currentTeamIndex + 1];
     var nextTeamIndex = teamNames.indexOf(nextTeam);
 
+// This is the function that is called when clicking on a Pokemon's button. It
+// increments nextTeam and currentTeam, and resets them when they hit the end of
+// the array.
     function pickThisMon(objButton) {
+
+// Set pickedMon equal to whatever you just picked
       var pickedMon = objButton.value;
       console.log(pickedMon);
 
-
+// Print out the name of the next team to pick
       $("#whoseTurn").text(nextTeam);
-      console.log("current team before: " + currentTeam);
-      console.log("and their index: " + currentTeamIndex);
-      console.log("next team before: " + nextTeam);
-      console.log("and their index: " + nextTeamIndex);
+
+// Make the current picking team change to whatever the next team is, and
+// increment the next team's index
       currentTeam = nextTeam;
       currentTeamIndex = nextTeamIndex;
       nextTeamIndex++;
-      nextTeam = teamNames[nextTeamIndex];
 
+// If the next team's index goes past the last entry in the array, set it to the
+// first team in the array
       if (nextTeamIndex >= arrayLength) {
-        currentTeam = team[0];
-        currentTeamIndex = 0;
-        nextTeam = team[currentTeamIndex + 1];
-        nextTeamIndex = teamNames.indexOf(nextTeam);
+        nextTeamIndex = 0;
+        nextTeam = teamNames[0];
+      } else {
+        nextTeam = teamNames[nextTeamIndex];
       }
-      console.log("current team after: " + currentTeam);
-      console.log("and their index: " + currentTeamIndex);
-      console.log("next team after: " + nextTeam);
-      console.log("and their index: " + nextTeamIndex);
-
-
-      // var currentTeam = teamNames[i];
-
     };
 
     </script>

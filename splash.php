@@ -8,7 +8,7 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script src="js/SplashScripts.js?v=1"></script>
+    <script src="js/SplashScripts.js?v=11"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Welcome to the draft!</title>
   </head>
@@ -101,10 +101,7 @@ file later -->
           $pokemon = '';
         }
 
-        //$pokemon .='<td class="td"><img src="./img/pokeImages/737.png" alt = "" style="width:50px; height:50px; padding-top:5px;"><button onclick="pClick">'.$row['forme'].'</button></td>';
         $pokemon .='<td class="td"><img src="./img/pokeImages/'.$row['id'].'.gif" alt = "" style="width:50px; height:50px; padding-top:5px;"><button type="submit" name="fk" onclick="pickThisMon(this); this.disabled=true;" value='.$row['forme'].'>'.$row['forme'].'</button></td>';
-
-
 
         if($i%12==9){
           echo '</tr>';

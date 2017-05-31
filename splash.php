@@ -102,7 +102,7 @@ file later -->
         }
 
         //$pokemon .='<td class="td"><img src="./img/pokeImages/737.png" alt = "" style="width:50px; height:50px; padding-top:5px;"><button onclick="pClick">'.$row['forme'].'</button></td>';
-        $pokemon .='<td class="td"><img src="./img/pokeImages/'.$row['id'].'.gif" alt = "" style="width:50px; height:50px; padding-top:5px;"><button type="submit" name="fk" onclick="pickThisMon(this)" value='.$row['forme'].'>'.$row['forme'].'</button></td>';
+        $pokemon .='<td class="td"><img src="./img/pokeImages/'.$row['id'].'.gif" alt = "" style="width:50px; height:50px; padding-top:5px;"><button type="submit" name="fk" onclick="pickThisMon(this); this.disabled=true;" value='.$row['forme'].'>'.$row['forme'].'</button></td>';
 
 
 

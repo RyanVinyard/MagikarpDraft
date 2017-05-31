@@ -59,6 +59,9 @@ file later -->
 // picked.
       $("#whoseTurn").text(nextTeam);
       $("#whichTeam").text(currentTeam + " has selected: " + pickedMon + "!");
+
+//This next bit just finds the div for whichever team just picked. The divs were
+//created in the js file. See the comment there.
       var teamJustPicked = $("body").find('#teamSlot' + currentTeamIndex);
       $(teamJustPicked).append(pickedMon + ", ");
 

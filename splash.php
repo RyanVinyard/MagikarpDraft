@@ -59,6 +59,8 @@ file later -->
 // picked.
       $("#whoseTurn").text(nextTeam);
       $("#whichTeam").text(currentTeam + " has selected: " + pickedMon + "!");
+      var teamJustPicked = $("body").find('#teamSlot' + currentTeamIndex);
+      $(teamJustPicked).append(pickedMon + ", ");
 
 // Make the current picking team change to whatever the next team is, and
 // increment the next team's index

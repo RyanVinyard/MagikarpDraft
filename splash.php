@@ -44,18 +44,25 @@
 
 
       $("#whoseTurn").text(nextTeam);
-      console.log(currentTeam);
-      console.log(currentTeamIndex);
-      console.log(nextTeam);
-      console.log(nextTeamIndex);
+      console.log("current team before: " + currentTeam);
+      console.log("and their index: " + currentTeamIndex);
+      console.log("next team before: " + nextTeam);
+      console.log("and their index: " + nextTeamIndex);
       currentTeam = nextTeam;
       currentTeamIndex = nextTeamIndex;
       nextTeamIndex++;
       nextTeam = teamNames[nextTeamIndex];
-      console.log(currentTeam);
-      console.log(currentTeamIndex);
-      console.log(nextTeam);
-      console.log(nextTeamIndex);
+
+      if (nextTeamIndex >= arrayLength) {
+        currentTeam = team[0];
+        currentTeamIndex = 0;
+        nextTeam = team[currentTeamIndex + 1];
+        nextTeamIndex = teamNames.indexOf(nextTeam);
+      }
+      console.log("current team after: " + currentTeam);
+      console.log("and their index: " + currentTeamIndex);
+      console.log("next team after: " + nextTeam);
+      console.log("and their index: " + nextTeamIndex);
 
 
       // var currentTeam = teamNames[i];

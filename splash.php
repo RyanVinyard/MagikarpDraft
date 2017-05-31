@@ -21,7 +21,12 @@
     </div>
 
     <p>Currently picking for: </p>
+
+
     <div id="whoseTurn">
+    </div>
+    <br><br>
+    <div id="whichTeam">
     </div>
 
 <!-- Script tag added here for ease of php parsing, likely to move to a different
@@ -50,8 +55,10 @@ file later -->
       var pickedMon = objButton.value;
       console.log(pickedMon);
 
-// Print out the name of the next team to pick
+// Print out the name of the next team to pick, and which mon the last team
+// picked.
       $("#whoseTurn").text(nextTeam);
+      $("#whichTeam").text(currentTeam + " has selected: " + pickedMon + "!");
 
 // Make the current picking team change to whatever the next team is, and
 // increment the next team's index
